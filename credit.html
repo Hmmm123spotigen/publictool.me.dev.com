@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Credit Card Generator</title>
+    <meta name="description" content="Credit Card Generator">
+    <link rel="stylesheet" href="fonts.googleapis.com">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Credit Card Generator">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000">
+    <meta name="application-name" content="Credit Card Generator">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navigations">
+            <span style="color:#fff; font-size: 18px; font-weight: bold;">Credit Card Generator</span>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form-generator></form-generator>
+                </div>
+                <div class="col-md-6">
+                    <generated-credit-cards></generated-credit-cards>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="if (!window.__cfRLUnblockHandlers) return false; copy()" data-cf-modified-11d01c3c4a4775b6e87e6d0c-="">Copy Cards</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" type="11d01c3c4a4775b6e87e6d0c-text/javascript"></script>
+    <script type="11d01c3c4a4775b6e87e6d0c-text/javascript">
+        function copy() {
+            document.querySelector("textarea").select();
+            document.execCommand('copy');
+        }
+    </script>
+<script src="rocket-loader.min.js" data-cf-settings="11d01c3c4a4775b6e87e6d0c-|49" defer></script><script>(function(){var js = "window['__CF$cv$params']={r:'7d207affecf90eb6',m:'kMwSt7VHrRoc.b.atl7AGJ1lb_Vf6rCNDYOb9l7A3gA-1685884902-0-AWbMLmf8s8XHtioScxvfvrnXz5Dc1EnyP77zi0EuddWD',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+</html>

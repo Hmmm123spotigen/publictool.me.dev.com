@@ -1,0 +1,249 @@
+<html>
+
+<head>
+  <title>Mouse Test</title>
+  <script src="jquery-3.6.0.min.mouse.js" type="29976124941022e0f400e26e-text/javascript"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    h1,
+    h4 {
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    input {
+      display: inline-block;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid;
+      -webkit-appearance: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+      margin: 0;
+      -webkit-transition: 0.1s;
+      transition: 0.1s;
+      font-weight: 400;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+    }
+
+    textarea {
+      background-color: #fff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-image: none;
+      border-radius: 4px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: inherit;
+      outline: none;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    .button {
+      display: inline-block;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid;
+      -webkit-appearance: none;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+      margin: 0;
+      -webkit-transition: 0.1s;
+      transition: 0.1s;
+      font-weight: 400;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .columns {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 980px) {
+      .columns .column {
+        flex-basis: 40%;
+
+        &:nth-last-child(2) {}
+      }
+    }
+
+    @media screen and (max-width: 680px) {
+      .columns .column {
+        flex-basis: 100%;
+      }
+    }
+
+    .click {
+      width: 100%;
+      height: 200px;
+      background: orange;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="columns">
+    <div class="column">
+      <h1>Pooling Rate Test</h1>
+      <div id="liverate">Average: <b>0</b> Hz. </div>
+      <textarea id="preading" rows="20" cols="100%" disabled></textarea>
+      <br />
+      <input type="button" class="button" value="Start" onclick="if (!window.__cfRLUnblockHandlers) return false; strtrate();" id="rsb" data-cf-modified-29976124941022e0f400e26e-="">
+      <script type="29976124941022e0f400e26e-text/javascript">
+        var fps = 4;
+        var count = 0;
+        var tick = 0;
+        var total = 0;
+        var tmr = null;
+        var testExp = new RegExp('All Devices' + 'All Phones' + 'All Browsers', 'i');
+        var isDesktop = !testExp['test'](navigator['userAgent']);
+        var x = 50;
+        var y = 50;
+
+        function updateCount() {
+          tick++;
+          total += count;
+          //textarea
+          var tnodes = (count * fps + ' Hz');
+          jQuery('#preading').append(tnodes + '\n');
+          var psconsole = jQuery('#preading');
+          if (psconsole.length) psconsole.scrollTop(psconsole[0].scrollHeight - psconsole.height())
+          //single
+          var tnum = Math['ceil']((fps * total) / tick);
+          jQuery('#liverate').html('');
+          jQuery('#liverate').html(' <div class="rateresult">Average: <b>' + tnum + '</b> Hz.</div>');
+          count = 0;
+          if (tick > 3 * fps) {
+            tick = 0;
+            total = 0;
+          }
+        }
+
+        function canvasLoop(fst) {
+          var ex = fst['movementX'] || fst['mozMovementX'] || 0;
+          var ey = fst['movementY'] || fst['mozMovementY'] || 0;
+          x += ex;
+          y += ey;
+        }
+
+        function valloop(bas) {
+          var evnt = 'getCoalescedEvents' in bas ? bas['getCoalescedEvents']() : [bas];
+          for (e in evnt) {
+            canvasLoop(e);
+            count++;
+          }
+        }
+        var w = window['innerWidth'] || document['documentElement']['clientWidth'] || document['body']['clientWidth'];
+        var h = window['innerHeight'] || document['documentElement']['clientHeight'] || document['body']['clientHeight'];
+        if (!isDesktop) {
+          alert('Only for desktop');
+        } else {
+          function strtrate() {
+            count = 0;
+            tick = 0;
+            total = 0;
+            if (tmr) {
+              clearInterval(tmr);
+              document['removeEventListener']('pointermove', valloop);
+              tmr = null;
+              jQuery('#rsb').val('Start');
+            } else {
+              document['addEventListener']('pointermove', valloop);
+              if (tmr) {
+                clearInterval(tmr);
+              }
+              tmr = setInterval(updateCount, 1000 / fps);
+              jQuery('#rsb').val('Stop');
+            }
+          }
+        }
+      </script>
+      <script type="29976124941022e0f400e26e-text/javascript">
+        window.console = window.console || function (t) { };
+      </script>
+      <script type="29976124941022e0f400e26e-text/javascript">
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+      </script>
+
+      <body translate="no" onmousedown="if (!window.__cfRLUnblockHandlers) return false; mouseClick();" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-29976124941022e0f400e26e-="">
+        <h1>Click Test</h1>
+        <div id="click" class="click"></div> Clicks: <input id="count" type="text" value="0" size="4" disabled>
+        <button id="reset" class="button">Reset</button>
+        <br> Fast double click count: <input id="dcCount" type="text" value="0" size="4" disabled>
+        <br>
+        <textarea id="textarea" rows="20" cols="100%" disabled></textarea>
+        <script id="invisible.mouse.js" type="29976124941022e0f400e26e-text/javascript">
+          var click = document.getElementById('click');
+          var textarea = document.getElementById('textarea');
+          var clicks = document.getElementById('count');
+          var dcCount = document.getElementById('dcCount');
+          var reset = document.getElementById('reset');
+          reset.onclick = function () {
+            clicks.value = 0;
+            dcCount.value = 0;
+            textarea.value = '';
+            click.style.background = 'orange';
+          };
+          var prevClickMicrotime = microtime(true);
+
+          function microtime(get_as_float) {
+            var now = new Date().
+              getTime() / 1000;
+            var s = parseInt(now, 10);
+            return get_as_float ? now : Math.round((now - s) * 1000) / 1000 + ' ' + s;
+          }
+          var prevClickMicrotime = microtime(true);
+
+          function clickEvent() {
+            clickTime = microtime(true);
+            diff = clickTime - prevClickMicrotime;
+            if (diff <= 0.08) {
+              click.style.background = 'red';
+              dcCount.value++;
+            }
+            textarea.value = diff + "\n" + textarea.value;
+            prevClickMicrotime = clickTime;
+            clicks.value++;
+          }
+
+          function mouseClick() {
+            var e = window.event;
+            console.log(e);
+            clickEvent();
+            return false;
+          }
+        </script>
+    <script src="rocket-loader.min.mouse.js" data-cf-settings="29976124941022e0f400e26e-|49" defer></script></div>
+  </section>
+<script>(function(){var js = "window['__CF$cv$params']={r:'7d20af91d9d61923',m:'FpCfTh1wbOlJbMB38utbSez12Vfi7.5Vi.75pmkxe3M-1685887055-0-Afqw47VA9JdiXRMDBdotpQ7L+rLzMs12nPjaHDOvkyW5',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+</html>

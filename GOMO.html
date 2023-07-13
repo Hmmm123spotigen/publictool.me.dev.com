@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>GOMO Register</title>
+    <script src="modernizr.min.gomo.js" type="ca25e69cd9c75a3d41ad9d75-text/javascript"></script>
+    <link rel="stylesheet" href="bootstrapValidator.min.gomo.css">
+    <link rel="stylesheet" href="bootstrap-theme.gomo.min.css">
+    <link rel="stylesheet" href="bootstrapValidator.min.gomo.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/ico" href="https://www.gomo.ph/content/dam/globe/gomo/favicon.ico">
+    <style>
+      @media (min-width:800px) {
+        .container {
+          width: 800px
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container col-12">
+      <h2>GOMO Register</h2>
+      <form class="well form-horizontal" action="" method="post" id="unlidataform">
+        <fieldset>
+          <div class="form-group">
+            <label class="col-md-4 control-label">GOMO Number</label>
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-earphone"></i>
+                </span>
+                <input name="number" placeholder="09123456789" class="form-control" type="text" value="" onkeypress="if (!window.__cfRLUnblockHandlers) return false; return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" maxlength="11" data-cf-modified-ca25e69cd9c75a3d41ad9d75-="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label">GOMO Pin</label>
+            <div class="col-md-4 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-lock"></i>
+                </span>
+                <input name="pin" placeholder="••••••" class="form-control" type="password" value="" maxlength="6" onkeypress="if (!window.__cfRLUnblockHandlers) return false; return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" required data-cf-modified-ca25e69cd9c75a3d41ad9d75-="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label">Promo List</label>
+            <div class="col-md-4 selectContainer">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-list"></i>
+                </span>
+                <select name="promo" class="form-control selectpicker">
+                  <option selected="selected" disabled="disabled">Select promo</option>
+                  <option value="Gomo_CallSMSAllNetData25GB">DATA 25 GB / 500 TEXTS / 100 MINUTES CALL</option>
+                  <option value="Gomo_DataOnly_25GB_199">DATA ONLY 25 GB</option>
+                  <option value="Gomo_DataOnly_30GB">DATA ONLY 30 GB</option>
+                  <option value="Gomo_DataOnly_55GB">DATA ONLY 55 GB</option>
+                  <option value="Gomo_UnliData_15D">UNLI DATA 15 DAYS</option>
+                  <option value="Gomo_UnliData_30D">UNLI DATA 30 DAYS</option>
+                  <option value="Gomo_GEOALL_30D">ALL UNLI 30 DAYS</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label"></label>
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-warning">Register <span class="glyphicon glyphicon-send"></span>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <center>Zythaniel Edrad ©<br/>
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#gcash"><img src="/../img/donate.svg" width="98pt" height="22pt"></button>
+      </center>
+      <div class="modal fade" id="gcash" tabindex="-1" role="dialog" aria-labelledby="gcash" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+              <span class="modal-title" id="gcash"><object data="/../img/gcash-banner.svg" width="98pt" height="22pt"></object></span>
+            </div>
+            <center>
+              <div class="modal-body">
+                <img class="img-responsive" src="/../img/qrcode.svg" style="max-width:60%">
+                <h2 style="color:#2d6ee2">Jerome Laliag</h2>
+                <h3 style="color:#808184">09324247230</h3>
+                <textarea type="text" id="gcashnumber" style="position:absolute;left:-1000px;top:-1000px">09324247230</textarea>
+                <button onclick="if (!window.__cfRLUnblockHandlers) return false; copy()" class="btn btn-primary" data-cf-modified-ca25e69cd9c75a3d41ad9d75-="">
+                  <div id="copybutton">Copy</div>
+                </button>
+              </div>
+            </center>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="jquery.gomo.js" type="ca25e69cd9c75a3d41ad9d75-text/javascript"></script>
+    <script src="bootstrapvalidator.min.gomo.js" type="ca25e69cd9c75a3d41ad9d75-text/javascript"></script>
+    <script src="bootstrapValidator.min.gomo.css" type="ca25e69cd9c75a3d41ad9d75-text/javascript"></script>
+    <script type="ca25e69cd9c75a3d41ad9d75-text/javascript">
+        function copy() {
+          document.getElementById("gcashnumber").select(), document.execCommand("copy"), document.getElementById("copybutton").innerHTML = "Copied!"
+        }
+      $(document).ready(function() {
+        $("#unlidataform").bootstrapValidator({
+          feedbackIcons: {
+            valid: "glyphicon glyphicon-ok",
+            invalid: "glyphicon glyphicon-remove",
+            validating: "glyphicon glyphicon-refresh"
+          },
+          fields: {
+            number: {
+              validators: {
+                stringLength: {
+                  min: 11
+                },
+                notEmpty: {
+                  message: "Please enter your mobile number"
+                }
+              }
+            },
+            pin: {
+              validators: {
+                notEmpty: {
+                  message: "Please enter your pin"
+                }
+              }
+            },
+            promo: {
+              validators: {
+                notEmpty: {
+                  message: "Please select your promo"
+                }
+              }
+            }
+          }
+        }).on("success.form.bv", function(o) {
+          $("#success_message").slideDown({
+            opacity: "show"
+          }, "slow"), $("#unlidataform").data("bootstrapValidator").resetForm(), o.preventDefault(), (o = $(o.target)).data("bootstrapValidator"), $.post(o.attr("action"), o.serialize(), function(o) {
+            console.log(o)
+          }, "json")
+        })
+      })
+    </script>
+  <script src="rocket-loader.min.js" data-cf-settings="ca25e69cd9c75a3d41ad9d75-|49" defer></script><script>(function(){var js = "window['__CF$cv$params']={r:'7d209363e83904b4',m:'Nfao70oomZ4Vua_gSrhH8C7kC9oM1NrAOMvKR0pEbTU-1685885901-0-AZoQDKGfSXcGauv6X7n0DcOzHzJoNqW4EW7PH1iyNLbR',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>
