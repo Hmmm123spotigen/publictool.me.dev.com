@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LoginPage</title>
+ <link rel="icon" type="image/png" href="download (1).png">
+ <link rel="stylesheet" type="text/css" href="loginpage.css">
+    
+</head>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 340px;
+			height:250px;
+            margin: 0 auto;
+            margin-top: 100px;
+            text-align: center;
+			background-color:#fff;
+        }
+        
+        h2 {
+            margin-bottom:20px;
+        }
+        
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+           width: 90%;
+           padding: 5px;
+           background-color: #ADD8E6;
+           color: #fff;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+}
+        button {
+            width: 20%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		</style>
+		
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome</h2>
+		<a font-color:black><p2>inform the admin</p2></a>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+    <center>Zythaniel Edrad ©<br/>
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#gcash"><img src="download.jfif" width="98pt" height="22pt"></button>
+      </center>
+    <script>
+		function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            // Perform authentication logic here
+            // You can check the credentials against a database or any other method
+            
+            if (username === 'admin' && password === 'password') {
+                // Successful authentication
+				 alert('Login successful!, Welcome Nigga!!!!');
+                // Redirect to the success page
+                window.location.href = 'Installer All.html';
+            } else {
+                // Failed authentication
+                alert('Contact the Administrator IT.');
+            }
+        }
+    </script>
+	</body>
+</html>
