@@ -59,9 +59,14 @@
     <div class="container">
         <h2>Welcome</h2>
 	<a font-color:black><p2>inform the admin</p2></a>
-        <input type="text" id="username" placeholder="Username">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="login()">Login</button>
+         <h2>Login</h2>
+    <form action="login_process.php" method="post">
+        <label>Username:</label>
+        <input type="text" name="username" required><br>
+        <label>Password:</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
 	<br>
 	<p2>Don't Have Account</p2>	
 	</div>
