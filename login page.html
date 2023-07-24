@@ -56,17 +56,12 @@
 		
 </head>
 <body>
-    <div class="container">
-	<a font-color:black><p2>inform the admin</p2></a>
-        <h2>Welcome</h2>
-         <h2>Login</h2>
-    <form action="login_process.php" method="post">
-        <label>Username:</label>
-        <input type="text" name="username" required>
-        <label>Password:</label>
-        <input type="password" name="password" required>
-        <input type="submit" value="Login">
-    </form>
+     <div class="container">
+        <h2>Welcome to the WiFi Portal</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
 	<br>
 	<p2>Don't Have Account</p2>	
 	</div>
