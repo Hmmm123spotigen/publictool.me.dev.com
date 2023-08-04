@@ -58,8 +58,21 @@
 <body>
      <div class="container">
         <h2>CodeCraftopia</h2>
-        <input type="text" id="username" placeholder="Username">
+         <input type="text" id="username" placeholder="Username">
         <input type="password" id="password" placeholder="Password">
+	<input type="checkbox" id="showPassword" onchange="togglePasswordVisibility()">
+        <label for="showPassword">Show Password</label>
+	
+	     <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
         <button onclick="login()">Login</button>
 		<br>
 		<br>
