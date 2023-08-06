@@ -3,6 +3,19 @@ body {
     font-family: Arial, sans-serif;
     color: #fff;
 }
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 601px) {
+    form {
+        width: 70%;
+    }
+}
 .container {
     width: 350px;
     height: 350px;
@@ -10,7 +23,7 @@ body {
     margin-top: 100px;
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
+    border-radius:55px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
